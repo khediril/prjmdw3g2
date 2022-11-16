@@ -1,0 +1,16 @@
+
+ 
+{% extends "base.html.twig" %}
+
+{% block title %}Somme
+{% endblock %}
+
+
+{% block body %}
+	    <h1>Liste des etudiants : {{ classe }}</h1>
+<ul>
+    {% for etud in etuds %}
+        <li>{{ etud }}</li>
+    {% endfor %}
+
+{% endblock %}

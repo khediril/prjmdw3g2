@@ -1,0 +1,14 @@
+{% extends "base.html.twig" %}
+
+
+{% block title %}Somme
+{% endblock %}
+
+
+{% block body %}
+	 Bonjour
+     <img src="{{ asset('images/photo.jpg')}}"/>
+     <hr/>
+        <a href="{{path('app_somme',{'nb1':10,'nb2':100})}}">Aller a bonjour</a>
+
+{% endblock %}

@@ -1,0 +1,17 @@
+{% extends "base.html.twig" %}
+
+{% block title %}Somme
+{% endblock %}
+
+
+{% block body %}
+	<h1>La somme de
+		{{a}}
+		et
+		{{b}}
+		est :
+		{{som}}</h1>
+        <hr/>
+        <a href="{{path('app_bonjour')}}">Aller a bonjour</a>
+
+{% endblock %}
