@@ -1,0 +1,39 @@
+{% extends 'mabase.html.twig' %}
+
+{% block title %}Ajout produit
+{% endblock %}
+
+{% block body %}
+	<h2>Details Produit</h2>
+{% if p %}
+
+	<div class="container">
+		<table class="table table-striped">
+			<thead>
+				<tr>
+					<th scope="col">ID</th>
+					<td>{{ p.id }}</td>
+				</tr>
+				<tr>
+					<th scope="col">NOM</th>
+          <td>{{ p.nom }}</td>
+				</tr>
+				<tr>
+					<th scope="col">PRIX</th>
+          <td>{{ p.prix }}</td>
+				</tr>
+				<tr>
+					<th scope="col">QUANTITE</th>
+          <td>{{ p.quantite }}</td>
+				</tr>
+			</thead>
+			
+		</table>
+    {% else %}
+      <div class="alert alert-primary" role="alert">
+        <strong>Produit non existant</strong> .....
+      </div>
+      
+  {% endif %}
+	</div>
+{% endblock %}

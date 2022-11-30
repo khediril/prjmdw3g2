@@ -1,0 +1,31 @@
+{% extends 'mabase.html.twig' %}
+
+{% block title %}Ajout produit{% endblock %}
+
+{% block body %}
+   <h2>liste des produits</h2>
+
+   <div class="container">
+   <table class="table table-striped">
+  <thead>
+    <tr>
+      <th scope="col">ID</th>
+      <th scope="col">NOM</th>
+      <th scope="col">Actions</th>
+      
+  </thead>
+  <tbody>
+  {% for p in produits %}
+   <tr>
+      <th scope="row">{{ p.id }}</th>
+      <td>{{ p.nom }}</td>
+      <td><a href="{{ path('app_produit_details',{'id':p.id})}}">Details</a>
+       | <a href="{{ path('app_produit_delete',{'id':p.id})}}">Supprimer</a></td>
+     
+    </tr>
+  {% endfor %}
+   </tbody>
+</table>
+
+   </div>
+{% endblock %}
